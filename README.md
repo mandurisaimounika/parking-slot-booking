@@ -1,7 +1,7 @@
 # parking-slot-booking
 Basic parking slot booking CRUD operations in Node based on the roles (admin or standard).
 # Frameworks and libraries used
-Express.js, PostgreSQL
+Typescript, Express.js, PostgreSQL
 # node modules used
 joi, uuid, pg, jsonwebtoken, uuid-validate, express-validation
 # Things to be executed before running the application
