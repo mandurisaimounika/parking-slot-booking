@@ -1,9 +1,7 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import bookingRoute from "./booking";
-import {
-  createUser
-} from "./database/addUsersToDatabase";
+import { createUser } from "./database/addUsersToDatabase";
 
 // Create an express app
 const app = express();

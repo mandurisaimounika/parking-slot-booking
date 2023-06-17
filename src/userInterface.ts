@@ -1,6 +1,4 @@
-import {
-  Request
-} from 'express';
+import { Request } from "express";
 
 //User interface
 export interface User {
@@ -8,10 +6,10 @@ export interface User {
   lastname: string;
   email: string;
   token: string;
-  role: 'admin' | 'standard';
+  role: "admin" | "standard";
 }
 
 //Extending Request Object by adding user object
 export interface ExtendedRequest extends Request {
-  user ? : User;
+  user?: User;
 }
