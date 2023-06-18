@@ -10,6 +10,47 @@ joi, uuid, pg, jsonwebtoken, uuid-validate, express-validation
 3. Create the table bookings by running the command '**CREATE TABLE bookings (id VARCHAR(50), createdBy VARCHAR(30), startTime VARCHAR(30), endTime VARCHAR(30), parkingSpot VARCHAR(30), createdAt VARCHAR(30), updatedAt VARCHAR(30));**'
 4. Use 'npm run start' command to start the application (It compiles all the typescript files into dist folder and starts the server)
 5. PgAdmin can be used for accessing the PostgreSQL databases (It's optional to use)
+# Routes
+1. /users (for creating users) <br />
+
+   **Request Type** <br />
+   POST <br />
+   
+   **Body** <br />
+{ <br />
+  "firstName": "test", <br />
+  "lastName": "one", <br />
+  "email": "test.one@gmail.com", <br />
+  "token": "admin-token", <br />
+  "role": "admin" <br />
+} <br />
+3. /bookings (for creating bookings) <br />
+
+   **Request Type** <br />
+   POST <br />
+   
+   **Body** <br />
+{ <br />
+    "parkingSpot": "A33", <br />
+    "startTime": "13:00", <br />
+    "endTime": "23:30" <br />
+} <br />
+4. /bookings (get all the bookings for admin and specific booking for standard) <br />
+
+   **Request Type** <br />
+   GET <br />
+5. /bookings/:id (get booking with id admin can fetch with any booking id but standard users can fetch only their own booking id) <br />
+
+   **Request Type** <br />
+   GET <br />
+6. /bookings/:id (edit booking with id admin can edit with any booking id but standard users can edit only their own booking id) <br />
+
+   **Request Type** <br />
+   PUT <br />
+7. /bookings/:id (delete booking with id admin can delete with any booking id but standard users can delete only their own booking id) <br />
+
+   **Request Type** <br />
+   DELETE <br />
 # Detailes considered
 1. All the reusable codes are written in separate files
 2. All the typescript files are compiled to commonJS files usign tsconfig.json
